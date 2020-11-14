@@ -1,0 +1,4 @@
+name: Test
+version: ${project.version}
+main: me.ialext.gui.test.Test
+api-version: 1.8
