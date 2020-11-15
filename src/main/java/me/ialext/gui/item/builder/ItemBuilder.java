@@ -21,15 +21,15 @@ public interface ItemBuilder {
 
     ItemStack build();
 
-    default ItemBuilder newBuilder(Material type, int amount, byte data) {
+    static ItemBuilder newBuilder(Material type, int amount, byte data) {
         return new DefaultItemBuilder(type, amount, data);
     }
 
-    default ItemBuilder newBuilder(Material type, int amount) {
+    static ItemBuilder newBuilder(Material type, int amount) {
         return new DefaultItemBuilder(type, amount);
     }
 
-    default ItemBuilder newBuilder(Material type) {
+    static ItemBuilder newBuilder(Material type) {
         return new DefaultItemBuilder(type);
     }
 }

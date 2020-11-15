@@ -13,7 +13,7 @@ public interface WindowItem {
 
     ItemStack getItem();
 
-    default WindowItem newBuilder(int slot, ItemStack item, Button button) {
+    static WindowItem newBuilder(int slot, ItemStack item, Button button) {
         return new DefaultWindowItem(slot, item, button);
     }
 }
