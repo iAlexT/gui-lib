@@ -18,6 +18,10 @@ public interface WindowBuilder {
 
     WindowItem getItem(int slot);
 
+    WindowConsumer<InventoryOpenEvent> getOpenEventConsumer();
+
+    WindowConsumer<InventoryCloseEvent> getCloseEventConsumer();
+
     void runOpen(InventoryOpenEvent openEvent);
 
     void runClose(InventoryCloseEvent closeEvent);

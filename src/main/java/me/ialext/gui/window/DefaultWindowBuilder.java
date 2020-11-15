@@ -66,6 +66,16 @@ public class DefaultWindowBuilder implements WindowBuilder {
     }
 
     @Override
+    public WindowConsumer<InventoryOpenEvent> getOpenEventConsumer() {
+        return openEventWindowConsumer;
+    }
+
+    @Override
+    public WindowConsumer<InventoryCloseEvent> getCloseEventConsumer() {
+        return closeEventWindowConsumer;
+    }
+
+    @Override
     public void runOpen(InventoryOpenEvent openEvent) {
         openEventWindowConsumer.apply(openEvent);
     }
