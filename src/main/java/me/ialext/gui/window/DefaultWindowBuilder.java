@@ -22,7 +22,7 @@ public class DefaultWindowBuilder implements WindowBuilder {
     private WindowConsumer<InventoryOpenEvent> openEventWindowConsumer;
     private WindowConsumer<InventoryCloseEvent> closeEventWindowConsumer;
 
-    public DefaultWindowBuilder(String title, int rows) {
+    DefaultWindowBuilder(String title, int rows) {
         this.title = title;
         this.rows = rows;
 
@@ -30,6 +30,7 @@ public class DefaultWindowBuilder implements WindowBuilder {
 
         windows.put(title, this);
     }
+
     @Override
     public WindowBuilder addItem(WindowItem item) {
         items[item.getSlot()] = item;

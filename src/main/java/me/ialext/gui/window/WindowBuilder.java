@@ -22,4 +22,7 @@ public interface WindowBuilder {
 
     Inventory build();
 
+    static WindowBuilder newBuilder(String title, int rows) {
+        return new DefaultWindowBuilder(title, rows);
+    }
 }
