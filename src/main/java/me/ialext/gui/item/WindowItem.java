@@ -1,6 +1,6 @@
-package me.ialext.gui.guilib.item;
+package me.ialext.gui.item;
 
-import me.ialext.gui.guilib.item.action.Button;
+import me.ialext.gui.item.action.Button;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Optional;

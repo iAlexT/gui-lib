@@ -1,7 +1,7 @@
-package me.ialext.gui.guilib.window;
+package me.ialext.gui.window;
 
-import me.ialext.gui.guilib.window.action.WindowConsumer;
-import me.ialext.gui.guilib.item.WindowItem;
+import me.ialext.gui.window.action.WindowConsumer;
+import me.ialext.gui.item.WindowItem;
 import org.bukkit.Bukkit;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;

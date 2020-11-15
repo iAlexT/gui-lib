@@ -1,4 +1,4 @@
-package me.ialext.gui.guilib.item.builder;
+package me.ialext.gui.item.builder;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;

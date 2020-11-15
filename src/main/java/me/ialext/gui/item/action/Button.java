@@ -1,4 +1,4 @@
-package me.ialext.gui.guilib.item.action;
+package me.ialext.gui.item.action;
 
 import org.bukkit.event.inventory.InventoryClickEvent;
 

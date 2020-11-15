@@ -1,9 +1,8 @@
-package me.ialext.gui.guilib;
+package me.ialext.gui;
 
-import me.ialext.gui.guilib.item.WindowItem;
-import me.ialext.gui.guilib.item.action.Button;
-import me.ialext.gui.guilib.window.DefaultWindowBuilder;
-import me.ialext.gui.guilib.window.WindowBuilder;
+import me.ialext.gui.item.action.Button;
+import me.ialext.gui.window.DefaultWindowBuilder;
+import me.ialext.gui.window.WindowBuilder;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
