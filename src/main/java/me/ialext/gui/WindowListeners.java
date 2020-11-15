@@ -21,6 +21,11 @@ public class WindowListeners implements Listener {
             if(event.getSlot() < 0) {
                 return;
             }
+
+            if(event.getCurrentItem() == null) {
+                return;
+            }
+
             Optional<Button> optionalButton = window.getItem(event.getSlot()).getButton();
             if(!optionalButton.isPresent()) {
                 return;
