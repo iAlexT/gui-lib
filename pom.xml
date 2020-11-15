@@ -8,4 +8,8 @@
     <artifactId>GUI-API</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+    <modules>
+        <module>Core</module>
+    </modules>
 </project>
