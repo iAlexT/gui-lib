@@ -74,10 +74,5 @@
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.iAlexT</groupId>
-            <artifactId>GUI-API</artifactId>
-            <version>ef676f117f</version>
-        </dependency>
     </dependencies>
 </project>
