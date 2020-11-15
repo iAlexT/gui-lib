@@ -21,6 +21,7 @@ public class DefaultWindowBuilder implements WindowBuilder {
 
     private WindowConsumer<InventoryOpenEvent> openEventWindowConsumer;
     private WindowConsumer<InventoryCloseEvent> closeEventWindowConsumer;
+    private boolean cancel;
 
     DefaultWindowBuilder(String title, int rows) {
         this.title = title;
@@ -53,6 +54,13 @@ public class DefaultWindowBuilder implements WindowBuilder {
     }
 
     @Override
+    public WindowBuilder cancelClick(boolean cancel) {
+        this.cancel = cancel;
+
+        return this;
+    }
+
+    @Override
     public WindowItem getItem(int slot) {
         return items[slot];
     }
@@ -65,6 +73,11 @@ public class DefaultWindowBuilder implements WindowBuilder {
     @Override
     public void runClose(InventoryCloseEvent closeEvent) {
         closeEventWindowConsumer.apply(closeEvent);
+    }
+
+    @Override
+    public boolean isCancelClick() {
+        return cancel;
     }
 
     @Override

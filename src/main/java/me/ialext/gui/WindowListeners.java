@@ -34,7 +34,10 @@ public class WindowListeners implements Listener {
     public void onInventoryOpen(InventoryOpenEvent event) {
         Optional<WindowBuilder> optionalWindowBuilder = DefaultWindowBuilder.getWindow(event.getInventory().getTitle());
 
-        optionalWindowBuilder.ifPresent(window -> window.runOpen(event));
+        optionalWindowBuilder.ifPresent(window -> {
+            window.runOpen(event);
+            event.setCancelled(window.isCancelClick());
+        });
     }
 
     @EventHandler

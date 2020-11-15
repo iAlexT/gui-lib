@@ -14,11 +14,15 @@ public interface WindowBuilder {
 
     WindowBuilder closeEvent(WindowConsumer<InventoryCloseEvent> closeEventWindowConsumer);
 
+    WindowBuilder cancelClick(boolean cancel);
+
     WindowItem getItem(int slot);
 
     void runOpen(InventoryOpenEvent openEvent);
 
     void runClose(InventoryCloseEvent closeEvent);
+
+    boolean isCancelClick();
 
     Inventory build();
 
