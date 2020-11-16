@@ -10,6 +10,8 @@ public interface WindowBuilder {
 
     WindowBuilder addItem(WindowItem item);
 
+    WindowBuilder filler(WindowItem item, int from, int to);
+
     WindowBuilder openEvent(WindowConsumer<InventoryOpenEvent> openEventWindowConsumer);
 
     WindowBuilder closeEvent(WindowConsumer<InventoryCloseEvent> closeEventWindowConsumer);

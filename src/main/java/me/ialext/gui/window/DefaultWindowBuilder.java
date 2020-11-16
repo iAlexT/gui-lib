@@ -1,5 +1,6 @@
 package me.ialext.gui.window;
 
+import me.ialext.gui.item.DefaultWindowItem;
 import me.ialext.gui.window.action.WindowConsumer;
 import me.ialext.gui.item.WindowItem;
 import org.bukkit.Bukkit;
@@ -35,6 +36,19 @@ public class DefaultWindowBuilder implements WindowBuilder {
     @Override
     public WindowBuilder addItem(WindowItem item) {
         items[item.getSlot()] = item;
+
+        return this;
+    }
+
+    @Override
+    public WindowBuilder filler(WindowItem item, int from, int to) {
+        for(int i = from; i < to; i++) {
+            if(!item.getButton().isPresent()) {
+                items[i] = WindowItem.newBuilder(i, item.getItem(), null);
+            } else {
+                items[i] = WindowItem.newBuilder(i, item.getItem(), item.getButton().get());
+            }
+        }
 
         return this;
     }
