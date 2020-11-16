@@ -22,7 +22,7 @@ public class WindowListeners implements Listener {
                 return;
             }
 
-            if(event.getCurrentItem() == null) {
+            if(window.getItem(event.getSlot()) == null) {
                 return;
             }
 
